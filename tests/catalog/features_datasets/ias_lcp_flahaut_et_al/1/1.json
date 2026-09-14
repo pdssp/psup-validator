@@ -1,0 +1,82 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/ssys/v1.1.1/schema.json"
+  ],
+  "id": "1",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -62.500485,
+      -4.125455
+    ]
+  },
+  "bbox": [
+    -62.500485,
+    -4.125455,
+    -62.500485,
+    -4.125455
+  ],
+  "properties": {
+    "latitude": -4.125455,
+    "longitude": -62.500485,
+    "canyon": "Juventae",
+    "location_w": "walls",
+    "lcp_rich_b": 1100.0,
+    "chemical_composition": [
+      "Fe/Mg-phyllo"
+    ],
+    "ssys:targets": [
+      "mars"
+    ],
+    "ssys:local_time": "",
+    "ssys:target_class": "planet",
+    "instruments": [
+      "crism",
+      "hirise"
+    ],
+    "mission": "mro",
+    "datetime": "2012-08-06T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "lcp_flahaut_et_al"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "lcp_flahaut_et_al"
+    }
+  ],
+  "assets": {
+    "crism_url": {
+      "href": "https://viewer.mars.asu.edu/viewer/crism/FRT00010A43",
+      "type": "text/html",
+      "description": "The CRISM image used for observations",
+      "roles": [
+        "visual",
+        "data"
+      ]
+    },
+    "hirise_url": {
+      "href": "https://www.uahirise.org/ESP_011688_1760",
+      "type": "text/html",
+      "description": "The associated HiRISE image for complementary observations",
+      "roles": [
+        "visual",
+        "data"
+      ]
+    }
+  },
+  "collection": "ias_lcp_flahaut_et_al"
+}

@@ -1,0 +1,135 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/ssys/v1.1.1/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json"
+  ],
+  "id": "emissivite-5.03mic-OMEGA0",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180.0,
+          -90.0
+        ],
+        [
+          -180.0,
+          90.0
+        ],
+        [
+          180.0,
+          90.0
+        ],
+        [
+          180.0,
+          -90.0
+        ],
+        [
+          -180.0,
+          -90.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180.0,
+    -90.0,
+    180.0,
+    90.0
+  ],
+  "properties": {
+    "description": "OMEGA0 Emissivity at 5.03 mic",
+    "long_description": "40 ppd global maps of surface emissivity at 5.03 mic. Holes are set to NaN.",
+    "keywords": [
+      "emissivity",
+      "5mic",
+      "global"
+    ],
+    "sci:publications": [
+      {
+        "doi": "10.1016/j.icarus.2014.01.045",
+        "citation": "\n        J. Audouard, F. Poulet, M. Vincendon, J.-P. Bibring, F. Forget, Y. Langevin, B. Gondet, Mars surface thermal inertia and heterogeneities from OMEGA/MEX, Icarus, Volume 233, 2014, Pages 194-213, ISSN 0019-1035,\n        "
+      }
+    ],
+    "ssys:targets": [
+      "mars"
+    ],
+    "ssys:local_time": "",
+    "ssys:target_class": "planet",
+    "bands": [
+      {
+        "name": "Visible-SWIR",
+        "eo:common_name": "swir16",
+        "description": "[Operational] 0.36-1.05 \u00b5m; Fully functional, routine operations",
+        "eo:center_wavelength": 0.705,
+        "eo:full_width_half_max": 0.69
+      },
+      {
+        "name": "NIR-SWIR",
+        "eo:common_name": "nir",
+        "description": "[Discontinued] 0.95-2.65 \u00b5m, Non-op since August 2010 (final orbit #8485)",
+        "eo:center_wavelength": 1.8,
+        "eo:full_width_half_max": 1.7
+      },
+      {
+        "name": "IR-MWIR",
+        "eo:common_name": "lwir",
+        "description": "[Operational] 2.55-5.09 \u00b5m, Limited operations, on-demand only",
+        "eo:center_wavelength": 3.82,
+        "eo:full_width_half_max": 2.54
+      }
+    ],
+    "platform": "mex",
+    "instruments": [
+      "omega"
+    ],
+    "gsd": 5000,
+    "datetime": "2013-07-01T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.1016/j.icarus.2014.01.045"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "OMEGA mineral maps dataset"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "OMEGA mineral maps dataset"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "http://psup.ias.u-psud.fr/sitools/datastorage/user/storage/marsdata/omega/png/emissivite_5.03mic_OMEGA0_reduce.png",
+      "type": "image/png",
+      "description": "PNG thumbnail preview for visualizations",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "fits": {
+      "href": "http://psup.ias.u-psud.fr/sitools/datastorage/user/storage/marsdata/omega/fits/emissivite_5.03mic_OMEGA0.fits",
+      "type": "application/fits",
+      "description": "FITS data",
+      "roles": [
+        "visual",
+        "data"
+      ]
+    }
+  },
+  "collection": "omega_mineral_maps"
+}

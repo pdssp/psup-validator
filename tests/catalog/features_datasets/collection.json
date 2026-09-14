@@ -1,0 +1,143 @@
+{
+  "type": "Collection",
+  "id": "features_datasets",
+  "stac_version": "1.1.0",
+  "description": "This collection holds locations data for hydrated mineral terrains, Central peaks hydrated phases between Isidis\nand Hellas, Central peaks mineralogy south Valles Marineris, Valles Marineris low Calcium-Pyroxene, Seasonal South\npolar cap limits, Scalloped depressions and Lobate impact craters. This dataset contains vector catalogs\nand their associated metadatas. All catalogs are provided in GeoJSON file format.\n",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "./ias_hyd_global_290615/collection.json",
+      "type": "application/json",
+      "title": "hyd_global_290615"
+    },
+    {
+      "rel": "child",
+      "href": "./ias_detections_crateres_benjamin_bultel_icarus/collection.json",
+      "type": "application/json",
+      "title": "detections_crateres_benjamin_bultel_icarus"
+    },
+    {
+      "rel": "child",
+      "href": "./ias_lcp_flahaut_et_al/collection.json",
+      "type": "application/json",
+      "title": "lcp_flahaut_et_al"
+    },
+    {
+      "rel": "child",
+      "href": "./ias_lcp_vmwalls/collection.json",
+      "type": "application/json",
+      "title": "lcp_vmwalls"
+    },
+    {
+      "rel": "child",
+      "href": "./ias_crocus_ls150-310/collection.json",
+      "type": "application/json",
+      "title": "crocus_ls150-310"
+    },
+    {
+      "rel": "child",
+      "href": "./ias_scalloped_depression/collection.json",
+      "type": "application/json",
+      "title": "scalloped_depression"
+    },
+    {
+      "rel": "child",
+      "href": "./ias_costard_craters/collection.json",
+      "type": "application/json",
+      "title": "costard_craters"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/ssys/v1.1.1/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "title": "Mars vectorial features",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1677-09-21T00:12:43.145224Z",
+          "2262-04-11T23:47:16.854775Z"
+        ]
+      ]
+    }
+  },
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "polar cap",
+    "seasonal",
+    "south",
+    "CO2",
+    "crocus line",
+    "inner crocus line",
+    "outer crocus line",
+    "snowdrop distance",
+    "northern plains",
+    "periglacial",
+    "thermokarst",
+    "ground ice",
+    "global",
+    "craters",
+    "ejecta",
+    "lithosphere",
+    "mineralogy"
+  ],
+  "providers": [
+    {
+      "name": "Institut d'Astrophysique Spatiale (IAS) - IDOC",
+      "description": "The Integrated Data and Operation Center (IDOC) is responsible for processing, archiving\nand distributing data from space science missions in which the IAS institute is involved.\n",
+      "roles": [
+        "processor",
+        "producer",
+        "host"
+      ],
+      "url": "https://idoc.ias.universite-paris-saclay.fr"
+    },
+    {
+      "name": "G\u00e9osciences Paris-Saclay (GEOPS)",
+      "description": "GEOPS is a joint laboratory of the \u201cUniversit\u00e9 de Paris-Sud\u201d (UPSUD) and the \"Centre National\nde la Recherche Scientifique\" (CNRS).\n",
+      "roles": [
+        "processor",
+        "producer"
+      ],
+      "url": "http://geops.geol.u-psud.fr"
+    },
+    {
+      "name": "Planetary SUrface Portal (PSUP)",
+      "description": "PSUP is a french research service, by Observatoire Paris-Sud and Observatoire de Lyon, to help\nthe distribution of high added-value datasets of planetary surfaces.\n",
+      "roles": [
+        "licensor"
+      ],
+      "url": "https://psup.cnrs.fr"
+    }
+  ],
+  "summaries": {
+    "ssys:targets": [
+      "mars"
+    ],
+    "proj:code": [
+      "IAU:2015:49900"
+    ],
+    "ssys:target_class": "planet"
+  }
+}

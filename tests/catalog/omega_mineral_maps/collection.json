@@ -1,0 +1,163 @@
+{
+  "type": "Collection",
+  "id": "omega_mineral_maps",
+  "stac_version": "1.1.0",
+  "description": "PSUP OMEGA mineral maps are OMEGA-based NIR albedo, Ferric BD530, Ferric Nanophase, Olivine SP1, SP2, SP3, Pyroxene and Emissivity at 5.03\u00b5m. OMEGA is the VISNIR imaging spectrometer onboard ESA/Mars-Express spacecraft operating around Mars from January 2004. All maps are provided in FITS file format via the \"download\" column.\n\nThis Dataset is also available as a VO TAP service (ivo://idoc/psup/omega_maps/q/epn_core).",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./albedo-r1080-equ-map/albedo-r1080-equ-map.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ferric-bd530-equ-map/ferric-bd530-equ-map.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ferric-nnphs-equ-map/ferric-nnphs-equ-map.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./olivine-osp1-equ-map/olivine-osp1-equ-map.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./olivine-osp2-equ-map/olivine-osp2-equ-map.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./olivine-osp3-equ-map/olivine-osp3-equ-map.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./pyroxene-bd2000-equ-map/pyroxene-bd2000-equ-map.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./albedo-filled/albedo-filled.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./albedo-unfilled/albedo-unfilled.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./emissivite-5.03mic-OMEGA0/emissivite-5.03mic-OMEGA0.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/ssys/v1.1.1/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "sci:publications": [
+    {
+      "doi": "10.1029/2012JE004117",
+      "citation": "A. Ody, F. Poulet, Y. Langevin, J.-P. Bibring, G. Bellucci, F. Altieri, B. Gondet, M. Vincendon, J.Carter and N. Manaud (2012), Global maps of anhydrous minerals at the surface of Mars from OMEGA/MEx, J. Geophys. Res., 117, E00J14"
+    },
+    {
+      "doi": "10.1016/j.icarus.2014.10.029",
+      "citation": "M. Vincendon, J. Audouard, F. Altieri, A. Ody (2015), Mars Express measurements of surface albedo changes over 2004\u20132010, In Icarus, Volume 251, 2015, Pages 145-163, ISSN 0019-1035"
+    },
+    {
+      "doi": "10.1016/j.icarus.2014.01.045",
+      "citation": "J. Audouard, F. Poulet, M. Vincendon, J.-P. Bibring, F. Forget, Y. Langevin, B. Gondet (2014), Mars surface thermal inertia and heterogeneities from OMEGA/MEX, In Icarus Volume 233, 2014, Pages 194-213"
+    },
+    {
+      "doi": "10.1016/j.pss.2017.01.016",
+      "citation": "F. Poulet, C. Quantin-Nataf, H. Ballans, K. Dassas, J. Audouard, J. Carter, B. Gondet, L. Lozac\u2019h, J.-C. Malapert, C. Marmo, L. Riu, A. S\u00e9journ\u00e9 (2018), PSUP: a Planetary SUrface Portal, Planetary and Space Science, Volume 150, 2018, Pages 2-8"
+    }
+  ],
+  "title": "OMEGA mineral maps dataset",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2012-05-02T00:00:00Z",
+          "2014-07-10T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "ferric oxides",
+    "5mic",
+    "nanophase ferric oxides",
+    "emissivity",
+    "global",
+    "olivine",
+    "pyroxene",
+    "unfilled",
+    "albedo",
+    "filled"
+  ],
+  "providers": [
+    {
+      "name": "Institut d'Astrophysique Spatiale (IAS) - IDOC",
+      "description": "The Integrated Data and Operation Center (IDOC) is responsible for processing, archiving\nand distributing data from space science missions in which the IAS institute is involved.\n",
+      "roles": [
+        "processor",
+        "producer",
+        "host"
+      ],
+      "url": "https://idoc.ias.universite-paris-saclay.fr"
+    },
+    {
+      "name": "G\u00e9osciences Paris-Saclay (GEOPS)",
+      "description": "GEOPS is a joint laboratory of the \u201cUniversit\u00e9 de Paris-Sud\u201d (UPSUD) and the \"Centre National\nde la Recherche Scientifique\" (CNRS).\n",
+      "roles": [
+        "processor",
+        "producer"
+      ],
+      "url": "http://geops.geol.u-psud.fr"
+    },
+    {
+      "name": "Planetary SUrface Portal (PSUP)",
+      "description": "PSUP is a french research service, by Observatoire Paris-Sud and Observatoire de Lyon, to help\nthe distribution of high added-value datasets of planetary surfaces.\n",
+      "roles": [
+        "licensor"
+      ],
+      "url": "https://psup.cnrs.fr"
+    }
+  ],
+  "summaries": {
+    "ssys:targets": [
+      "mars"
+    ],
+    "proj:code": [
+      "IAU:2015:49900"
+    ],
+    "ssys:target_class": "planet"
+  }
+}

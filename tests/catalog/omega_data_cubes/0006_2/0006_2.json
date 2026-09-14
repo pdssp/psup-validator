@@ -1,0 +1,608 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/ssys/v1.1.1/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json"
+  ],
+  "id": "0006_2",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          90.5093002319336,
+          -6.272500038146973
+        ],
+        [
+          90.5093002319336,
+          29.981698989868164
+        ],
+        [
+          90.42329406738281,
+          29.981698989868164
+        ],
+        [
+          90.42329406738281,
+          -6.272500038146973
+        ],
+        [
+          90.5093002319336,
+          -6.272500038146973
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    90.42329406738281,
+    -6.272500038146973,
+    90.5093002319336,
+    29.981698989868164
+  ],
+  "properties": {
+    "orbit_number": "0006",
+    "cube_number": 2,
+    "solar_longitude": 330.06298828125,
+    "data_quality": 3,
+    "pointing_mode": "ACROSSTRACK",
+    "martian_year": 26,
+    "prop_working_channels": [
+      1,
+      1,
+      1
+    ],
+    "is_target_mars": true,
+    "is_l_channel_working": true,
+    "is_c_channel_working": true,
+    "martian_time": "26:330.06:14.21",
+    "ssys:targets": [
+      "mars"
+    ],
+    "ssys:local_time": "",
+    "ssys:target_class": "planet",
+    "cube:dimensions": {
+      "pixel_x": {
+        "type": "spatial",
+        "description": "abscissa of the pixel",
+        "axis": "x",
+        "extent": [
+          1,
+          15
+        ],
+        "step": 1,
+        "unit": "px"
+      },
+      "pixel_y": {
+        "type": "spatial",
+        "description": "ordinate of the pixel",
+        "axis": "y",
+        "extent": [
+          1,
+          5375
+        ],
+        "step": 1,
+        "unit": "px"
+      },
+      "wavelength": {
+        "type": "spatial",
+        "description": "electomagnetic wavelength",
+        "axis": "z",
+        "extent": [
+          0.3643999993801117,
+          5.088980197906494
+        ],
+        "unit": "micrometer"
+      }
+    },
+    "cube:variables": {
+      "solar_longitude": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Mars-Sun angle, measured from the Northern Hemisphere spring equinox where Ls=0.",
+        "values": [
+          330.06298828125
+        ],
+        "unit": "degrees"
+      },
+      "data_quality": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "as defined in EAICD",
+        "values": [
+          3
+        ],
+        "unit": "1"
+      },
+      "tag_ok": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Mask to indicate that the if the target is Mars.\n        If tag_ok = 0 => target is not Mars. \n        Otherwise target is Mars.",
+        "values": [
+          1
+        ],
+        "unit": "1"
+      },
+      "year": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Martian Year at time of the measure",
+        "values": [
+          26
+        ],
+        "unit": "1"
+      },
+      "pointing_mode": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Image acquisition attitude control mode",
+        "values": [
+          "\"ACROSSTRACK\""
+        ],
+        "unit": "1"
+      },
+      "pres": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Mask that indicates working channels: \n        - pres[0] = 1 if C channel is OK,\n        - pres[1] = 1 if L channel is OK,\n        - pres[2] = 1 if VIS channel is OK.",
+        "values": [
+          "[1. 1. 1.]"
+        ],
+        "unit": "1"
+      },
+      "tag_l": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Mask for the L channel : if tag_l = 0 it means that the L channel is not OK.",
+        "values": [
+          1
+        ],
+        "unit": "1"
+      },
+      "tag_c": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Mask for the C channel : if tag_c = 0 it means that the C channel is not OK.",
+        "values": [
+          1
+        ],
+        "unit": "1"
+      },
+      "Reflectance": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "cube (X,[C,L,VIS],Y) of surface reflectance I/F/cos(i) where: \n        -channel C=[1.0-2.7 micrometers]; L=[2.6-5.2 micrometers]; Visible=[0.3-1.07 micrometers]\n        -atmospheric attenuation is corrected (1-5 micrometer);\n        -airborne dust scattering is corrected (0.4-2.5 micrometer and for 5 micrometer emissivity estimations); \n        -thermal contribution is removed (> 3 micrometer); L channel data is coregistered with C channel's; \n        -and where, if coregistered VIS channel data is available, it is used.",
+        "extent": [
+          -39892623360.0,
+          1.2095528554362246e+29
+        ],
+        "unit": "1"
+      },
+      "altitude": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "altitude of the mars surface based on the MOLA topography",
+        "extent": [
+          -4.555000305175781,
+          2.2710001468658447
+        ],
+        "unit": "meter"
+      },
+      "watericelin": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "the criterion described in Langevin et al. (2007) and based on the 1.5 micrometer band depth. It can be used to detect icy frost presence at the surface and thick clouds in the atmosphere. Every OMEGA pixel with a watericelin  value < 0.985 should be excluded.",
+        "extent": [
+          0.9602247476577759,
+          1.0184316635131836
+        ],
+        "unit": "1"
+      },
+      "icecloudsindex": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "the criterion (reflectance at 3.4 micrometer divided by reflectance at 3.52 micrometer)  described in Langevin et al. (2007) to identify the presence of water ice clouds. Its values range from 0.5 to 1.0. The smallest values unambiguously indicate the presence of icy clouds. We usually exclude any OMEGA pixel with a value < 0.8.",
+        "extent": [
+          0.8050320744514465,
+          0.9788343906402588
+        ],
+        "unit": "1"
+      },
+      "hour_at_LTST": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Martian hour at local true solar time LTST for the measure.",
+        "extent": [
+          14.207286834716797,
+          14.218719482421875
+        ],
+        "unit": "h at LTST"
+      },
+      "leslon0": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Longitude of the pixel footprint corner point 0.",
+        "extent": [
+          -6.275300025939941,
+          29.980199813842773
+        ],
+        "unit": "degrees_east"
+      },
+      "leslon1": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Longitude of the pixel footprint corner point 1.",
+        "extent": [
+          -6.275300025939941,
+          29.98029899597168
+        ],
+        "unit": "degrees_east"
+      },
+      "leslon2": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Longitude of the pixel footprint corner point 2.",
+        "extent": [
+          -6.269599914550781,
+          29.990999221801758
+        ],
+        "unit": "degrees_east"
+      },
+      "leslon3": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Longitude of the pixel footprint corner point 3.",
+        "extent": [
+          -6.269599914550781,
+          29.99090003967285
+        ],
+        "unit": "degrees_east"
+      },
+      "leslat0": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Latitude of the pixel footprint corner point 0.",
+        "extent": [
+          -6.275300025939941,
+          29.980199813842773
+        ],
+        "unit": "degrees_north"
+      },
+      "leslat1": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Latitude of the pixel footprint corner point 1.",
+        "extent": [
+          -6.275300025939941,
+          29.98029899597168
+        ],
+        "unit": "degrees_north"
+      },
+      "leslat2": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Latitude of the pixel footprint corner point 2.",
+        "extent": [
+          -6.269599914550781,
+          29.990999221801758
+        ],
+        "unit": "degrees_north"
+      },
+      "leslat3": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Latitude of the pixel footprint corner point 3.",
+        "extent": [
+          -6.269599914550781,
+          29.99090003967285
+        ],
+        "unit": "degrees_north"
+      },
+      "incidence_g": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Incidence angle with respect to the outward normal to the reference ellipsoid (unit degree).",
+        "extent": [
+          32.12820053100586,
+          53.88749694824219
+        ],
+        "unit": "degrees"
+      },
+      "emergence_g": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Emergence angle with respect to the outward normal to the reference ellipsoid (unit degree).",
+        "extent": [
+          4.352999687194824,
+          8.905599594116211
+        ],
+        "unit": "degrees"
+      },
+      "incidence_l": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Incidence angle with respect to the local normal (unit degree).",
+        "extent": [
+          15.7662992477417,
+          77.81119537353516
+        ],
+        "unit": "degrees"
+      },
+      "spacecraft_distance": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Slant distance from the spacecraft to the pixel footprint center point (unit meter).",
+        "extent": [
+          273884.0,
+          525216.0
+        ],
+        "unit": "meters"
+      },
+      "therm": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "Temperature at 5 micrometers for each px (unit Kelvin).",
+        "extent": [
+          180.0500030517578,
+          288.24676513671875
+        ],
+        "unit": "kelvin"
+      },
+      "latitude": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "latitude of the pixel",
+        "extent": [
+          -6.272500038146973,
+          29.985599517822266
+        ],
+        "unit": "degree North"
+      },
+      "longitude": {
+        "dimensions": [
+          "pixel_x",
+          "pixel_y",
+          "wavelength"
+        ],
+        "type": "data",
+        "description": "longitude of the pixel, ranges from -180 to +180 degrees",
+        "extent": [
+          90.41329956054688,
+          90.58480072021484
+        ],
+        "unit": "degree East"
+      },
+      "pixel_x": {
+        "dimensions": [
+          "x"
+        ],
+        "type": "auxiliary",
+        "description": "abscissa of the pixel",
+        "extent": [
+          1,
+          15
+        ],
+        "unit": "px"
+      },
+      "pixel_y": {
+        "dimensions": [
+          "y"
+        ],
+        "type": "auxiliary",
+        "description": "ordinate of the pixel",
+        "extent": [
+          1,
+          5375
+        ],
+        "unit": "px"
+      },
+      "wavelength": {
+        "dimensions": [
+          "z"
+        ],
+        "type": "auxiliary",
+        "description": "electomagnetic wavelength",
+        "extent": [
+          0.3643999993801117,
+          5.088980197906494
+        ],
+        "unit": "micrometer"
+      }
+    },
+    "mission": "mex",
+    "instruments": [
+      "omega"
+    ],
+    "bands": [
+      {
+        "name": "Visible-SWIR",
+        "eo:common_name": "swir16",
+        "description": "[Operational] 0.36-1.05 \u00b5m; Fully functional, routine operations",
+        "eo:center_wavelength": 0.705,
+        "eo:full_width_half_max": 0.69
+      },
+      {
+        "name": "NIR-SWIR",
+        "eo:common_name": "nir",
+        "description": "[Discontinued] 0.95-2.65 \u00b5m, Non-op since August 2010 (final orbit #8485)",
+        "eo:center_wavelength": 1.8,
+        "eo:full_width_half_max": 1.7
+      },
+      {
+        "name": "IR-MWIR",
+        "eo:common_name": "lwir",
+        "description": "[Operational] 2.55-5.09 \u00b5m, Limited operations, on-demand only",
+        "eo:center_wavelength": 3.82,
+        "eo:full_width_half_max": 2.54
+      }
+    ],
+    "datetime": "2016-04-11T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "OMEGA data cubes (L2)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "OMEGA data cubes (L2)"
+    }
+  ],
+  "assets": {
+    "nc": {
+      "href": "http://psup.ias.u-psud.fr/sitools/datastorage/user/storage/omegacubes/cubes_L2/0006_2.nc",
+      "type": "application/netcdf",
+      "description": "NetCDF data",
+      "size": "121.8 MiB",
+      "creation_date": "2018-06-13T00:00:00",
+      "roles": [
+        "data"
+      ]
+    },
+    "sav": {
+      "href": "http://psup.ias.u-psud.fr/sitools/datastorage/user/storage/omegacubes/cubes_L2/0006_2.sav",
+      "type": "application/octet-stream",
+      "description": "IDL .sav data",
+      "size": "126.7 MiB",
+      "dims": [
+        5376,
+        16
+      ],
+      "wavelength_n_values": 352,
+      "wavelength_range": [
+        0.3643999993801117,
+        5.088980197906494
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "/thumbnails/l2_thumbnail/0006_2_256x256.png",
+      "type": "image/png",
+      "description": "PNG thumbnail preview for visualizations",
+      "roles": [
+        "thumbnail"
+      ]
+    }
+  },
+  "collection": "omega_data_cubes",
+  "ssys:local_time": "26:330.06:14.21"
+}

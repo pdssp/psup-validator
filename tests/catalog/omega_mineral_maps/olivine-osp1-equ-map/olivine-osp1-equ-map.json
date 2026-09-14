@@ -1,0 +1,134 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/ssys/v1.1.1/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json"
+  ],
+  "id": "olivine-osp1-equ-map",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180.0,
+          -90.0
+        ],
+        [
+          -180.0,
+          90.0
+        ],
+        [
+          180.0,
+          90.0
+        ],
+        [
+          180.0,
+          -90.0
+        ],
+        [
+          -180.0,
+          -90.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180.0,
+    -90.0,
+    180.0,
+    90.0
+  ],
+  "properties": {
+    "description": "OMEGA Olivine SP1",
+    "long_description": "This data product is a global olivine spectral parameter map of Mars based on reflectance data acquired by the Mars Express OMEGA hyperspectral camera from January 2004 to August 2010. This olivine spectral parameter (OSP1) detects Mg-rich and/or small grain size and/or low abundance olivine.",
+    "keywords": [
+      "olivine",
+      "global"
+    ],
+    "sci:publications": [
+      {
+        "doi": "10.1029/2012JE004117",
+        "citation": "\n        Ody, A., F. Poulet, Y. Langevin, J.-P. Bibring, G. Bellucci, F. Altieri, B. Gondet, M. Vincendon, J. Carter, and N. Manaud (2012), Global maps of anhydrous minerals at the surface of Mars from OMEGA/MEx, J. Geophys. Res., 117, E00J14\n        "
+      }
+    ],
+    "ssys:targets": [
+      "mars"
+    ],
+    "ssys:local_time": "",
+    "ssys:target_class": "planet",
+    "bands": [
+      {
+        "name": "Visible-SWIR",
+        "eo:common_name": "swir16",
+        "description": "[Operational] 0.36-1.05 \u00b5m; Fully functional, routine operations",
+        "eo:center_wavelength": 0.705,
+        "eo:full_width_half_max": 0.69
+      },
+      {
+        "name": "NIR-SWIR",
+        "eo:common_name": "nir",
+        "description": "[Discontinued] 0.95-2.65 \u00b5m, Non-op since August 2010 (final orbit #8485)",
+        "eo:center_wavelength": 1.8,
+        "eo:full_width_half_max": 1.7
+      },
+      {
+        "name": "IR-MWIR",
+        "eo:common_name": "lwir",
+        "description": "[Operational] 2.55-5.09 \u00b5m, Limited operations, on-demand only",
+        "eo:center_wavelength": 3.82,
+        "eo:full_width_half_max": 2.54
+      }
+    ],
+    "platform": "mex",
+    "instruments": [
+      "omega"
+    ],
+    "gsd": 5000,
+    "datetime": "2012-05-02T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.1029/2012JE004117"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "OMEGA mineral maps dataset"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "OMEGA mineral maps dataset"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "http://psup.ias.u-psud.fr/sitools/datastorage/user/storage/marsdata/omega/png/olivine_osp1_equ_map_reduce.png",
+      "type": "image/png",
+      "description": "PNG thumbnail preview for visualizations",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "fits": {
+      "href": "http://psup.ias.u-psud.fr/sitools/datastorage/user/storage/marsdata/omega/fits/reversed_maps/olivine_osp1_equ_map.fits",
+      "type": "application/fits",
+      "description": "FITS data",
+      "roles": [
+        "visual",
+        "data"
+      ]
+    }
+  },
+  "collection": "omega_mineral_maps"
+}

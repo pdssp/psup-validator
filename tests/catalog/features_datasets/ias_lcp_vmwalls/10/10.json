@@ -1,0 +1,51 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/ssys/v1.1.1/schema.json"
+  ],
+  "id": "10",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -55.58943,
+      -14.012485,
+      -2600.0
+    ]
+  },
+  "bbox": [
+    -55.58943,
+    -14.012485,
+    -55.58943,
+    -14.012485
+  ],
+  "properties": {
+    "ssys:targets": [
+      "mars"
+    ],
+    "ssys:local_time": "",
+    "ssys:target_class": "planet",
+    "datetime": "2012-01-11T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "lcp_vmwalls"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "lcp_vmwalls"
+    }
+  ],
+  "assets": {},
+  "collection": "ias_lcp_vmwalls"
+}
